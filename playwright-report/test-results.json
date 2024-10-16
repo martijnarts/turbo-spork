@@ -1,0 +1,293 @@
+{
+  "config": {
+    "configFile": "/Volumes/Projects/archetype/app/playwright.config.ts",
+    "rootDir": "/Volumes/Projects/archetype/app/e2e-tests",
+    "forbidOnly": true,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Volumes/Projects/archetype/app/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "setupAuth",
+        "name": "setupAuth",
+        "testDir": "/Volumes/Projects/archetype/app/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "auth.setup.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Projects/archetype/app/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "teardownAuth",
+        "name": "teardownAuth",
+        "testDir": "/Volumes/Projects/archetype/app/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "auth.teardown.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Projects/archetype/app/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Projects/archetype/app/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.test\\.ts/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.47.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.teardown.ts",
+      "file": "auth.teardown.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "auth teardown",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "teardownAuth",
+              "projectName": "teardownAuth",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "5228e77054e433ae56aa-98d3f7d40d8d62d7b4f9",
+          "file": "auth.teardown.ts",
+          "line": 5,
+          "column": 9
+        }
+      ]
+    },
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "auth setup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setupAuth",
+              "projectName": "setupAuth",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 7197,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-16T07:38:39.049Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Volumes/Projects/archetype/app/test-results/auth.setup.ts-auth-setup-setupAuth/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Volumes/Projects/archetype/app/test-results/auth.setup.ts-auth-setup-setupAuth/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-e6cc750e1e7bfd9af1bf",
+          "file": "auth.setup.ts",
+          "line": 8,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "coreWorkflows.test.ts",
+      "file": "coreWorkflows.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Create a new workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "interrupted",
+                  "duration": 7799,
+                  "error": {
+                    "message": "Error: locator.waitFor: Test ended.\nCall log:\n  \u001b[2m- waiting for getByRole('heading', { name: 'What would you like to manage?' }) to be visible\u001b[22m\n",
+                    "stack": "Error: locator.waitFor: Test ended.\nCall log:\n  \u001b[2m- waiting for getByRole('heading', { name: 'What would you like to manage?' }) to be visible\u001b[22m\n\n    at Function.isOn (/Volumes/Projects/archetype/app/e2e-tests/pages/playbookCreation/start.ts:9:81)\n    at /Volumes/Projects/archetype/app/e2e-tests/coreWorkflows.test.ts:10:45",
+                    "location": {
+                      "file": "/Volumes/Projects/archetype/app/e2e-tests/pages/playbookCreation/start.ts",
+                      "column": 81,
+                      "line": 9
+                    },
+                    "snippet": "   at pages/playbookCreation/start.ts:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mstatic\u001b[39m \u001b[36masync\u001b[39m isOn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mPlaybookCreationStart\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"What would you like to manage?\"\u001b[39m })\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPlaybookCreationStart\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   }\n \u001b[90m 12 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Volumes/Projects/archetype/app/e2e-tests/pages/playbookCreation/start.ts",
+                        "column": 81,
+                        "line": 9
+                      },
+                      "message": "Error: locator.waitFor: Test ended.\nCall log:\n  \u001b[2m- waiting for getByRole('heading', { name: 'What would you like to manage?' }) to be visible\u001b[22m\n\n\n   at pages/playbookCreation/start.ts:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m   \u001b[36mstatic\u001b[39m \u001b[36masync\u001b[39m isOn(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mPlaybookCreationStart\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"What would you like to manage?\"\u001b[39m })\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mreturn\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPlaybookCreationStart\u001b[39m(page)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   }\n \u001b[90m 12 |\u001b[39m\u001b[0m\n\n    at Function.isOn (/Volumes/Projects/archetype/app/e2e-tests/pages/playbookCreation/start.ts:9:81)\n    at /Volumes/Projects/archetype/app/e2e-tests/coreWorkflows.test.ts:10:45"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-10-16T07:38:47.052Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Volumes/Projects/archetype/app/test-results/coreWorkflows-Create-a-new-workflow-chromium/video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Volumes/Projects/archetype/app/test-results/coreWorkflows-Create-a-new-workflow-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Volumes/Projects/archetype/app/e2e-tests/pages/playbookCreation/start.ts",
+                    "column": 81,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "64c5746243d0bb73491a-a3ada7274484bf55cf73",
+          "file": "coreWorkflows.test.ts",
+          "line": 6,
+          "column": 5
+        },
+        {
+          "title": "Edit a workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "64c5746243d0bb73491a-c986abf2d5451d1dd86d",
+          "file": "coreWorkflows.test.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "Use a workflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "64c5746243d0bb73491a-69ad8d4de5e53d2ed9ac",
+          "file": "coreWorkflows.test.ts",
+          "line": 87,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-10-16T07:38:38.720Z",
+    "duration": 16523.824,
+    "expected": 1,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
